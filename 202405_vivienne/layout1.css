@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*** header ***/
+header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
+header .header-nav {
+  background-color: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  padding: 0 16px;
+}
+
+header .header-nav .global-menu {
+  display: flex;
+}
+
+header .header-nav .global-menu li {
+  padding-left: 23px;
+}
+
+header .header-nav .global-menu li a span {
+  display: none;
+}
+
+/* main-menu */
+main .menu-container {
+  width: 100%;
+  position: fixed;
+  top: 54px;
+  
+}
+
+main .menu-container .main-menu {
+  display: none;
+  
+}
+
+main .menu-container .main-menu li a {
+  background-color: #fff;
+  padding: 20px 25px;
+  border-bottom: 1px solid #ddd;
+  display: block;
+}
+
+/* pc-sub-menu */
+main .menu-container .pc-sub-menu {
+  display: none;
+}
+
+/*** footer ***/
+footer {
+  padding: 0 16px;
+}
+
+footer .mobile-sub-menu {
+  padding: 100px 0 25px 0;
+}
+
+footer .mobile-sub-menu li {
+  padding-bottom: 15px;
+}
+
+footer .mobile-sub-menu li a {
+  font-size: 12px;
+  color: #272727;
+}
+
+footer address {
+  color: #898989;
+  font-size: 10px;
+  padding-bottom: 18px;
+}
+
+/***** pc *****/
+@media screen and (min-width: 768px) {
+  /* header */
+  header .header-nav {
+    height: 90px;
+    padding: 0 20px;
+  }
+
+  header .header-nav h1 img {
+    width: 140px;
+  }
+
+  /* 메뉴 */
+  main .menu-container .main-menu,
+  main .menu-container .pc-sub-menu {
+    display: block;
+  }
+
+  main .menu-container {
+    background-color: #ffe1e1;
+    position: relative;
+    display: block;
+    max-width: 200px;
+  }
+
+  main .menu-container .main-menu {
+    background-color: #fff9a0;
+    position: fixed;
+    top: 90px;
+  }
+
+  main .menu-container .main-menu li a {
+    border: none;
+    padding: 0;
+  }
+
+  main .menu-container .pc-sub-menu {
+    position: absolute;
+    bottom: 0;
+  }
+
+  /* footer */
+  footer .mobile-sub-menu {
+    display: none;
+  }
+
+  footer address {
+    text-align: center;
+  }
+}
